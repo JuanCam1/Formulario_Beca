@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/descargar.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Formulario beca</title>
+</head>
+<body class="contenedor">
+    <header>
+        <h1>Formulario de Solicitud de Beca</h1>
+    </header>
+   
+    <section>
+        <div>
+            <p>
+                Bienvenido a nuestro sistema de Solicitud de Becas online. Para ser tenido en cuenta para una beca en
+                nuestra universidad, debes completar la solicitud de beca online antes del 1 de Marzo de 2015. Aplicar
+                online no tiene cargo y te permite enviar toda la documentación respaldatoria necesaria a través de
+                nuestro Formulario de Solicitud de Beca aquí debajo.
+            </p>
+        </div>
+        <hr width="800px">
+        
+        
+        <div>
+            <form id="formularioInsercion" action="InsertarLibro.jsp" method="get">
+                <h2 class="colorV">Detalles Personales</h2>
+                <div class="form__nombre">
+                    <label for="fname">Nombre:</label>
+                    <input type="text" placeholder="Nombre" id="fname" name="fname" > 
+                    <input type="text" placeholder="Apellido" id="fapellido" name="fapellido"><br>
+                </div> 
+                
+                <label for="fecha">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha" name="fecha"><br>
+                
+                <div class="form__sexo">
+                    <label>Sexo:</label>
+                    <div class="form__sexo-opc">
+                        <input type="radio" id="male" name="sex" value="male">
+                        <label for="male">Hombre</label> <br>
+                        <input type="radio" id="female" name="sex" value="female">
+                        <label for="female">Mujer</label>  <br>
+                    </div>
+                </div>
+                
+                <div class="form__ci">
+                    <label for="ciud">Ciudadanía:</label><input type="text" id="ciud" name="ciud">
+                </div>
+                
+                <label form="email">Dirección de email:</label>
+                <input type="email" id="email" name="email">
+                
+                <div class="form__dir">
+                    <label for="direc">Dirección postal:</label>
+                    <div class="form__dir-camp">
+                        <input type="text" placeholder="Dirección" id="direc" name="direc" /> <br />
+                        <input type="text" placeholder="Dirección 2" id="direc2" name="direc2" /> <br />
+                    
+                        <div class="form__dir-uni">
+                            <input type="text" placeholder="Ciudad" id="ciudad" name="ciudad"/>
+                            <input type="text" placeholder="Región" id="region" name="region"/> 
+                        </div>
+                    
+                        <div class="form__dir-uni">
+                            <input type="text" placeholder="Código postal" id="postal" name="postal" />
+                            <select name="paises" id="paisese">
+                                <option value="país" label="País"></option>
+                                <option value="argentina" label="Argentina"></option>
+                                <option value="bolivia" label="Bolivia"></option>
+                                <option value="brasil" label="Brasil"></option>
+                                <option value="colombia" label="Colombia"></option>
+                                <option value="ecuador" label="Ecuador"></option>
+                                <option value="uruguay" label="Uruguay"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr width="800px">
+        
+                <h2 class="colorV">Estado actual de estudios e intenciones de estudio</h2>
+               
+                
+                <div class="form__est">
+                    <label form="estado">¿Cuál es tú estado actual de estudio?</label>
+                    <select name="estado" id="estado">
+                        <option value="null" label="*Seleccionar"></option>
+                        <option value="bachiller" label="Bachiller"></option>
+                        <option value="profesional" label="Profesional"></option>
+                        <option value="maestria" label="Maestria"></option>
+                        <option value="doctorado" label="Doctorado"></option>
+                    </select>
+                </div>
+                 
+                <label for="facul">¿A qué facultad pretendes asistir</label>
+                <textarea id="facul" name="facul" cols="28" rows="3"></textarea> <br>
+                
+                <div class="form__carrera">
+                    <label for="car1">Carrera 1:</label>
+                    <input type="text" id="car1" name="car1">
+                </div>
+                
+                <div class="form__carrera">
+                    <label for="car2">Carrera2</label>
+                    <input type="text" id="car2" name="car2">
+                </div>
+                
+                <div class="form__pre">
+                    <label for="pret">Pretendes estudiar:</label>
+                    <div class="form__pre-opc">
+                        <input type="radio" name="turno" id="time" value="part time">
+                        <label>Part time</label><br>
+                        <input type="radio" name="turno" id="full" value="full time">
+                        <label>Full time</label>
+                    </div>
+                </div>
+                 
+                
+                <div class="form__carrera">
+                    <label for="campus">Campus:</label>
+                    <input type="text" id="campus" name="campus">
+                </div>
+                
+                <div class="form__listado">
+                    <label for="lista">
+                        Por favor, haz una lista de cualquier reconocimiento académico de los cuales
+                        te gustaría que el Comité Académico tenga conocimiento:
+                    </label>
+                    <textarea id="lista" name="lista" cols="30" rows="3"></textarea> <br>
+                </div>
+                
+                <hr width="800px">
+
+                <h2 class="colorV">Documentación respaldatoria y referencias</h2>
+                
+                <div class="form__arrast">
+                    <label for="">Curriculum Vitae:</label>
+                    <div>
+                        <input name="fileInput" id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+                        <div id="fileOutput" class="fileOutput"></div>
+                    </div>
+                </div>
+                
+                <div class="form__arrast">
+                    <label for="">Carta de presentación:</label>
+                    <div>
+                        <input name="fileInput2" id="fileInput2" type="file" size="50" onchange="processFiles2(this.files)">
+                        <div id="fileOutput2" class="fileOutput"></div>
+                    </div>
+                </div>
+                
+                <div class="form__ref">
+                    <label>Nombre de la referencia
+                        y detalles de contacto
+                        completos:
+                    </label>
+                    <textarea cols="30" rows="3"></textarea> <br>
+                </div>
+            </form>
+        </div>
+           
+    </section>
+    <footer class="footer">
+        <p>Juan Camilo Rojas Díaz</p>
+        <p>Todos los derechos reservados-2021 &copy;</p>
+        
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

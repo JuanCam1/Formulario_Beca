@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.contenedor{
+    margin: 0 auto;
+    width: 800px;
+}
+
+.colorV{
+    color: #418316;
+    font-size: 22px;
+}
+
+header{
+    
+    height: 400px;
+    background-image: url(../img/800.png);
+    background-repeat: no-repeat;  
+    object-fit: cover;  
+}
+
+header h1{
+    line-height: 400px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+form label{
+	width:200px;
+	display:inline-block;
+    margin: 10px 0;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width: 545px;
+    height: 30px;
+	padding:3px 10px;
+	border:1px solid #cccccc;
+	border-radius:3px;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="date"]{
+    width: 550px;
+    height: 30px;
+}
+
+.form__nombre input[type="text"]{
+    width: 254px;
+}
+
+.form__sexo{
+    display: flex;
+    margin: 15px 0;
+}
+
+.form__sexo-opc{
+    line-height: .5;
+    font-size: 15px;
+}
+
+.form__ci{
+   margin-left: 5px;
+}
+
+.form__ci input[type="text"]{
+    width: 535px;
+}
+
+form input[type="email"]{
+    width: 535px;
+}
+
+.form__dir-camp input[type="text"]{
+    width: 535px;
+}
+
+.form__dir-uni input[type="text"]{
+    width: 254px;
+}
+
+.form__dir-uni select{
+    width: 275px;
+    height: 37px;
+}
+
+.form__dir-camp{
+    margin-left: 5px;
+}
+
+.form__dir{
+    display: flex;
+}
+
+.form__est{
+    display: flex;
+}
+
+.form__est select{
+    margin-left: 5px;
+    width: 560px;
+    height: 35px;
+}
+
+textarea{
+    width: 555px;
+}
+
+.form__carrera input[type="text"]{
+    width: 540px;
+}
+
+.form__pre{
+    display: flex;
+}
+
+.form__pre-opc{
+    line-height: .5;
+    font-size: 15px;
+}
+
+.form__listado textarea{
+    height: 90px;
+    position: relative;
+    bottom: 60px;
+}
+
+.fileOutput{
+    border: 1px solid black;
+    padding: 5px;
+    width: 560px;
+    height: 70px;
+    background: rgb(252, 246, 246);
+    line-height: 100px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form__arrast{
+    display: flex;
+}
+
+.form__ref{
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.form__ref label{
+    position: relative;
+    top: -30px
+}
+
+.form__ref textarea{
+    height: 100px;
+}
+
+.footer{
+    background-color: #942CBC;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    margin: 0;
+    color: white;
+}

@@ -12,21 +12,32 @@
 
 	String fname = request.getParameter("fname");
 	String fapellido = request.getParameter("fapellido");
-	String fecha= request.getParameter("fecha");
-
-
-
-
-	String email = request.getParameter("email");
+	String fecha = request.getParameter("fecha");
 	
-	String opcion1=null;
-	if (request.getParameter("opcion1")!=null);{
-	opcion1=request.getParameter("opcion1");
-		}
-	String opcion2=null;
-	if (request.getParameter("opcion2")!=null);{
-	opcion2=request.getParameter("opcion2");
-		}
+	String sexo = null;
+	sexo = request.getParameter("sex");
+	String ciudadania = request.getParameter("ciud");
+	String email = request.getParameter("email");
+	String direccion1 = request.getParameter("direc");
+	String direccion2 = request.getParameter("direc2");
+	String ciudad = request.getParameter("ciudad");
+	String region = request.getParameter("region");
+	String postal = request.getParameter("postal");
+
+	String pais = request.getParameter("paises");
+	String estado = request.getParameter("estado");
+	String textareaf = request.getParameter("facul");
+	String car1 = request.getParameter("car1");
+	String car2 = request.getParameter("car2");
+
+	String turno = null;
+	turno=request.getParameter("turno");
+	String campus = request.getParameter("campus");
+	String textareal = request.getParameter("lista");
+	String archivo1=request.getParameter("archivo1");
+	String archivo2=request.getParameter("archivo2");
+	String textareac = request.getParameter("contac");
+
 	Connection conexion = null;
 	Statement sentencia = null;
 	
@@ -36,13 +47,14 @@
 		Class.forName("com.mysql.jdbc.Driver");
 
 	conexion = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/prueba2", "root",
+				"jdbc:mysql://localhost:3306/formularioBeca", "root",
 				"");
 
 		sentencia = conexion.createStatement();
 
-		String consultaSQL = "insert into for1 (fname,lname,gender,email,opcion1,opcion2) values ";
-		consultaSQL += "('" + fname + "','" + lname + "','" + gender + "','" + email + "','" + opcion1 + "','" + opcion2 + "')";
+		String consultaSQL = "insert into beca (fname,lname,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,textareaf,car1,car2,turno,campus,textareal,archivo1,archivo2,textareac) values ";
+		consultaSQL += "('" + fname + "','" + lname + "','" + fecha + "','" + sexo + "','" + ciudadania + "','" + email + "','" + direccion1 +"','" + direccion2 +"','" + ciudad +"','" + region +"','" + postal +"','" + pais +
+		"','" + estado +"','" + textareaf +"','" + car1 +"','" + car2 +"','" + turno +"','" + campus +"','" + textareal +"','" + archivo1 +"','" + archivo2 +"','" + textareac + "')";
 
 		 filas = sentencia.executeUpdate(consultaSQL);
 		 

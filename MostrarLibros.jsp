@@ -24,23 +24,41 @@ try  {
 		Class.forName("com.mysql.jdbc.Driver");
 
 	conexion = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/prueba2", "root",
+				"jdbc:mysql://localhost:3306/formularioBeca", "root",
 				"");
 	 sentencia= conexion.createStatement();
 
-	 String consultaSQL=  "select fname,lname,gender,email,opcion1,opcion2 from for1";
+	 String consultaSQL=  "select fname,lname,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,
+	 textareaf,car1,car2,turno,campus,textareal,archivo1,archivo2,textareac from beca";
 
 	 rs=sentencia.executeQuery(consultaSQL);
 	 
 	 while(rs.next()) { %>
 	 
-		 <%=rs.getString("fname")%>
-		  <%=rs.getString("lname")%>
-		   <%=rs.getString("gender")%>
-		      <%=rs.getString("email")%>
-			<%=rs.getString("opcion1")%>
-			<%=rs.getString("opcion2")%>
-			<br/>
+		<%=rs.getString("fname")%>
+		<%=rs.getString("lname")%>
+		<%=rs.getString("fecha")%>
+		<%=rs.getString("sexo")%>
+		<%=rs.getString("ciudadania")%>
+		<%=rs.getString("email")%>
+		<%=rs.getString("direccion1")%>
+		<%=rs.getString("direccion2")%>
+		<%=rs.getString("ciudad")%>
+		<%=rs.getString("region")%>
+		<%=rs.getString("postal")%>
+		<%=rs.getString("pais")%>
+		<%=rs.getString("estado")%>
+		<%=rs.getString("textareaf")%>
+		<%=rs.getString("car1")%>
+		<%=rs.getString("car2")%>
+		<%=rs.getString("turno")%>
+		<%=rs.getString("campus")%>
+		<%=rs.getString("textareal")%>
+		<%=rs.getString("archivo1")%>
+		<%=rs.getString("archivo2")%>
+		<%=rs.getString("textareac")%>
+
+		<br/>
 	 
 	 
 	<% }
@@ -79,6 +97,6 @@ try  {
 	}
  }
 %>
-<a href="Punto_1.html">Insertar Libro</a>
+<a href="FormularioBeca.html">Insertar Libro</a>
 </body>
 </html>

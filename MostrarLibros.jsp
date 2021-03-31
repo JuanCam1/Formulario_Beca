@@ -11,6 +11,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mostrar.css">
 <title>Lista de Libros</title>
 </head>
 <body>
@@ -28,39 +31,64 @@ try  {
 				"");
 	 sentencia= conexion.createStatement();
 
-	 String consultaSQL=  "select fname,lname,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,
-	 textareaf,car1,car2,turno,campus,textareal,fileOutput,fileOutput2,textareac from beca";
+	 String consultaSQL=  "select fname,fapellido,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,textareaf,car1,car2,turno,campus,textareal,fileOutput,fileOutput2,textareac from beca";
 
 	 rs=sentencia.executeQuery(consultaSQL);
 	 
 	 while(rs.next()) { %>
-	 
-		<%=rs.getString("fname")%>
-		<%=rs.getString("lname")%>
-		<%=rs.getString("fecha")%>
-		<%=rs.getString("sexo")%>
-		<%=rs.getString("ciudadania")%>
-		<%=rs.getString("email")%>
-		<%=rs.getString("direccion1")%>
-		<%=rs.getString("direccion2")%>
-		<%=rs.getString("ciudad")%>
-		<%=rs.getString("region")%>
-		<%=rs.getString("postal")%>
-		<%=rs.getString("pais")%>
-		<%=rs.getString("estado")%>
-		<%=rs.getString("textareaf")%>
-		<%=rs.getString("car1")%>
-		<%=rs.getString("car2")%>
-		<%=rs.getString("turno")%>
-		<%=rs.getString("campus")%>
-		<%=rs.getString("textareal")%>
-		<%=rs.getString("fileOutput")%>
-		<%=rs.getString("fileOutput2")%>
-		<%=rs.getString("textareac")%>
-
-		<br/>
-	 
-	 
+		
+		<table class="default">
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Fecha</th>
+				<th>Sexo</th>
+				<th>ciudadania</th>
+				<th>Email</th>
+				<th>Direccion1</th>
+				<th>Direccion2</th>
+				<th>Ciudad</th>
+				<th>Región</th>
+				<th>Postal</th>
+				<th>Pais</th>
+				<th>Estado</th>
+				<th>Facultad</th>
+				<th>Carrera1</th>
+				<th>carrera2</th>
+				<th>Turno</th>
+				<th>Campus</th>
+				<th>Lista</th>
+				<th>Archivo1</th>
+				<th>Archivo2</th>
+				<th>Contacto</th>
+			</tr>
+		  
+			<tr>
+				<td><%=rs.getString("fname")%></td>
+				<td><%=rs.getString("fapellido")%></td>
+				<td><%=rs.getString("fecha")%></td>
+				<td><%=rs.getString("sexo")%></td>
+				<td><%=rs.getString("ciudadania")%></td>
+				<td><%=rs.getString("email")%></td>
+				<td><%=rs.getString("direccion1")%></td>
+				<td><%=rs.getString("direccion2")%></td>
+				<td><%=rs.getString("ciudad")%></td>
+				<td><%=rs.getString("region")%></td>
+				<td><%=rs.getString("postal")%></td>
+				<td><%=rs.getString("pais")%></td>
+				<td><%=rs.getString("estado")%></td>
+				<td><%=rs.getString("textareaf")%></td>
+				<td><%=rs.getString("car1")%></td>
+				<td><%=rs.getString("car2")%></td>
+				<td><%=rs.getString("turno")%></td>
+				<td><%=rs.getString("campus")%></td>
+				<td><%=rs.getString("textareal")%></td>
+				<td><%=rs.getString("fileOutput")%></td>
+				<td><%=rs.getString("fileOutput2")%></td>
+				<td><%=rs.getString("textareac")%></td>
+		  	</tr>
+		</table>
+		<br>
 	<% }
 
 }catch (ClassNotFoundException e) {

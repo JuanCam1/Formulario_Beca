@@ -161,6 +161,12 @@ textarea{
     height: 100px;
 }
 
+form input[type="submit"]{
+    font-size:20px;
+    margin-bottom: 10px;
+    margin-left: 50%;
+}
+
 .footer{
     background-color: #942CBC;
     text-align: center;

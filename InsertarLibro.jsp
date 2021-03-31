@@ -34,8 +34,8 @@
 	turno=request.getParameter("turno");
 	String campus = request.getParameter("campus");
 	String textareal = request.getParameter("lista");
-	String archivo1=request.getParameter("archivo1");
-	String archivo2=request.getParameter("archivo2");
+	String fileOutput=request.getParameter("fileOutput");
+	String fileOutput2=request.getParameter("fileOutput2");
 	String textareac = request.getParameter("contac");
 
 	Connection conexion = null;
@@ -52,9 +52,9 @@
 
 		sentencia = conexion.createStatement();
 
-		String consultaSQL = "insert into beca (fname,lname,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,textareaf,car1,car2,turno,campus,textareal,archivo1,archivo2,textareac) values ";
-		consultaSQL += "('" + fname + "','" + lname + "','" + fecha + "','" + sexo + "','" + ciudadania + "','" + email + "','" + direccion1 +"','" + direccion2 +"','" + ciudad +"','" + region +"','" + postal +"','" + pais +
-		"','" + estado +"','" + textareaf +"','" + car1 +"','" + car2 +"','" + turno +"','" + campus +"','" + textareal +"','" + archivo1 +"','" + archivo2 +"','" + textareac + "')";
+	String consultaSQL = "insert into beca (fname,fapellido,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,textareaf,car1,car2,turno,campus,textareal,fileOutput,fileOutput2,textareac) values ";
+		consultaSQL += "('" + fname + "','" + fapellido + "','" + fecha + "','" + sexo + "','" + ciudadania + "','" + email + "','" + direccion1 +"','" + direccion2 +"','" + ciudad +"','" + region +"','" + postal +"','" + pais +
+		"','" + estado +"','" + textareaf +"','" + car1 +"','" + car2 +"','" + turno +"','" + campus +"','" + textareal +"','" + fileOutput +"','" + fileOutput2 +"','" + textareac + "')";
 
 		 filas = sentencia.executeUpdate(consultaSQL);
 		 

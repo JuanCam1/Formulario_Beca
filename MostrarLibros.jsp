@@ -29,7 +29,7 @@ try  {
 	 sentencia= conexion.createStatement();
 
 	 String consultaSQL=  "select fname,lname,fecha,sexo,ciudadania,email,direccion1,direccion2,ciudad,region,postal,pais,estado,
-	 textareaf,car1,car2,turno,campus,textareal,archivo1,archivo2,textareac from beca";
+	 textareaf,car1,car2,turno,campus,textareal,fileOutput,fileOutput2,textareac from beca";
 
 	 rs=sentencia.executeQuery(consultaSQL);
 	 
@@ -54,8 +54,8 @@ try  {
 		<%=rs.getString("turno")%>
 		<%=rs.getString("campus")%>
 		<%=rs.getString("textareal")%>
-		<%=rs.getString("archivo1")%>
-		<%=rs.getString("archivo2")%>
+		<%=rs.getString("fileOutput")%>
+		<%=rs.getString("fileOutput2")%>
 		<%=rs.getString("textareac")%>
 
 		<br/>
